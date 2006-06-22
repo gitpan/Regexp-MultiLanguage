@@ -1,0 +1,9 @@
+--- #YAML:1.0
+name: Regexp-MultiLanguage
+version: 0.01
+author:
+  - Robby Walker <robwalker@cpan.org>
+abstract: Convert common regular expressions checks
+in to Perl, PHP, and JavaScript code.
+license: perl
+generated_by: Module::Build version 0.2612, without YAML.pm
