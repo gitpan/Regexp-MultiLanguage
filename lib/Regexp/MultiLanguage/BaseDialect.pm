@@ -11,11 +11,11 @@ of the work of writing a dialect for Regexp::MultiLanguage
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 =head1 SYNOPSIS
 
@@ -79,7 +79,10 @@ sub statement {
 sub comment { 
 	my ($this,$item) = @_;
 	
-	return $this->comment_start . substr($item->{'__PATTERN1__'}, 2);	
+	my $comment = $item->{'__PATTERN1__'};
+	$comment =~ s/^(\/\/|#)//;
+	
+	return $this->comment_start . $comment;
 }
 
 # expression handling
@@ -125,7 +128,7 @@ sub and_expr_i {
 sub not_expr {
 	my ( $this, $item ) = @_;
 	
-   (exists $item->{'__STRING1__'} ? '!' : '') . $item->{'brack_expr'};
+   return (exists $item->{'__STRING1__'} ? '!' : '') . $item->{'brack_expr'};
 }
 
 sub brack_expr {
@@ -149,6 +152,10 @@ sub operand {
 =head1 SEE ALSO
 
 L<Regexp::MultiLanguage>
+
+=head1 AUTHOR
+
+Robby Walker, robwalker@cpan.org
 
 =head1 COPYRIGHT & LICENSE
 

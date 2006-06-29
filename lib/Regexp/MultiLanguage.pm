@@ -14,11 +14,11 @@ in to Perl, PHP, and JavaScript code.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -114,7 +114,7 @@ sub import {
 
 =head1 AUTHOR
 
-Robby Walker, C<< <robwalker at cpan.org> >>
+Robby Walker, robwalker@cpan.org
 
 =head1 BUGS
 

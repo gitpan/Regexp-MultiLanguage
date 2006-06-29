@@ -10,11 +10,11 @@ Regexp::MultiLanguage::JavaScript - JavaScript dialect for Regexp::MultiLanguage
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 =head1 SYNOPSIS
 
@@ -50,8 +50,12 @@ sub make_function {
 sub function_call {
 	my ($this,$name) = @_;
 	my $prefix = $this->{'prefix'};
-	return "$prefix$name(\$_[0])";
+	return "$prefix$name( value )";
 }
+
+=head1 AUTHOR
+
+Robby Walker, robwalker@cpan.org
 
 =head1 COPYRIGHT & LICENSE
 

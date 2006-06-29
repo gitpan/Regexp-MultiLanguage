@@ -10,11 +10,11 @@ Regexp::MultiLanguage::PHP - PHP dialect for Regexp::MultiLanguage.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 =head1 SYNOPSIS
 
@@ -54,6 +54,10 @@ sub function_call {
 	my $prefix = $this->{'prefix'};
 	return "$prefix$name( \$text )";
 }
+
+=head1 AUTHOR
+
+Robby Walker, robwalker@cpan.org
 
 =head1 COPYRIGHT & LICENSE
 
