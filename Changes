@@ -1,5 +1,7 @@
 Revision history for Regexp-MultiLanguage
 
+0.02    6/29/2006 - 11:31 a.m.
+        Fixed bug in JavaScript dialect - forgot a )
 0.01    6/22/2006 - 10:00 a.m.
         First version, released on an unsuspecting world.
 
